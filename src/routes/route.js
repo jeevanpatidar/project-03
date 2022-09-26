@@ -21,6 +21,6 @@ router.post("/books/:bookId/review", authontication, validationmware.reviewvalid
 router.put("/books/:bookId/review/:reviewId", authontication,  updatereviewbookbybookid) //update review
 router.delete("/books/:bookId/review/:reviewId", authontication,  deletereviewbyid) //delete review
 
-router.all("/*", (req,res)=>{  return res.status(400).send({status: false , msg : "Endpoint is not valid"})})
+router.all("/*", (req,res) => {return res.status(400).send({status: false , msg : "Endpoint is not valid"})})
 
 module.exports = router

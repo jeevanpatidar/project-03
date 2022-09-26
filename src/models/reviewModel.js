@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const ObjectId = mongoose.Schema.Types.ObjectId
 const moment = require("moment");
-const { required } = require("joi");
 
 const reviewSchema = new mongoose.Schema(
     {
@@ -20,7 +19,8 @@ const reviewSchema = new mongoose.Schema(
             required : true,
         },
         rating: {
-             type: Number 
+             type: Number,
+             required: true
             },
         review: { 
             type: String 
