@@ -14,12 +14,6 @@ const createBook = async (req, res) => {
             if (uniqueData.title == title.trim()) { return res.status(400).send({ message: `${title.trim()} is already exist` }) 
             } else if(uniqueData.ISBN == ISBN.trim()) { return res.status(400).send({ message: `${ISBN.trim()} this ISBN is already exist`}) }}
 
-        // let uniqueisbn = await bookModel.findOne({ ISBN: ISBN, isDeleted: false })
-        // let uniquetitle = await bookModel.findOne({ title: title, isDeleted: false })
-
-        // if (uniquetitle) return res.status(400).send({ status: false, message: "Title should be unique" })
-        // if (uniqueisbn) return res.status(400).send({ status: false, message: "ISBN should be unique" })
-
         let saveData = await bookModel.create(data)
         return res.status(201).send({ status: true, message: "data created successfully", data: saveData })
 

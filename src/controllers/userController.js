@@ -1,6 +1,5 @@
 const userModel = require("../models/userModel")
 const jwt = require("jsonwebtoken")
-const moment = require('moment')
  
 module.exports = {
  createUser : async(req,res) => {

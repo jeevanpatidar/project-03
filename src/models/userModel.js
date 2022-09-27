@@ -39,7 +39,6 @@ const userSchema = new mongoose.Schema({
     createdAt: { type: String, default: moment().format("DD-MM-YYYY  h:mm:ss a") },
     updatedAt: { type: String, default: moment().format("DD-MM-YYYY  h:mm:ss a") }
 });
-userSchema.pre
 module.exports = mongoose.model('User', userSchema) //users
 
 
